@@ -23,10 +23,6 @@ iterating over the elements is reversed, the array is still sorted the same way
 some basic testing code that uses [jsverify](https://jsverify.github.io/) in
 `code.test.js`.
 
-## TL;DR
-
-$\Theta(n^2)$
-
 ## Average-Case Time Complexity of Insertion Sort
 
 In the lectures, we covered that insertion sort has best-case time complexity of
@@ -40,6 +36,10 @@ constant factors.
 Describe your reasoning and the conclusion you've come to. Your reasoning is
 most important -- you can easily find the answer, but you need to demonstrate
 that you've understood the concept. Add your answer to this markdown file.
+
+## TL;DR
+
+$\Theta(n^2)$
 
 ## Best, Worst, and Average Overview
 
