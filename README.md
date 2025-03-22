@@ -88,6 +88,6 @@ randomly ordered elements, each location is equally likely as the i-th element's
 proper location, requiring as little as 1 comparison, to a maximum of i-1 comparisons  
 with each number of comparisons being equally likely, leading the average number of  
 comparison necessary to be the sum of possibilities divided by the number of  
-possibilities, or $frac{(1+2+3+...+(i-1))}{(i-1)}$
+possibilities, or $\frac{(1+2+3+...+(i-1))}{(i-1)}$
 
 
