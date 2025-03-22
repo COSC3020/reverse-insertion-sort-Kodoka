@@ -100,7 +100,8 @@ average time complexity of $\Theta(n^2)$
 
 ## Sources
 
-I used wolframalpha at https://www.wolframalpha.com/ for calculations.
+I used wolframalpha at https://www.wolframalpha.com/ for calculating the sum of the  
+average comparisons from the i-th=2 through n-1 elements of an array.
 
 I got the sum of the first (n-1) numbers from:
 https://math.stackexchange.com/questions/185728/intuition-on-the-sum-of-first-n-1-numbers-is-equal-to-the-number-of-ways-of-pi
