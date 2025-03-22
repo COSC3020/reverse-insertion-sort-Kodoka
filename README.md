@@ -37,7 +37,7 @@ Describe your reasoning and the conclusion you've come to. Your reasoning is
 most important -- you can easily find the answer, but you need to demonstrate
 that you've understood the concept. Add your answer to this markdown file.
 
-## Average-Case Time Complexity and Reasoning
+## Best, Worst, and Average Overview
 
 As discussed, the best case time complexity of insertion sort will be $\Theta(n)$.  
 This occurs when we're working with a fully sorted array like [1, 2, 3, 4, 5].  
@@ -51,8 +51,43 @@ sorted portion, to get it to the correct position. 5 is greater than 4, so it
 must move right. 5 is greater than 3, so it must move right, then 4 is greater  
 than 3, so it must move right as well...  
 
-So we have a best case, a worst case, a secret third case: average. What you're  
-likely to see when you're not dealing with perfectly sorted/reverse sorted arrays.
-This looks something like [4, 1, 3, 5, 2].
+So we have a best case, a worst case, and a secret third case: average; what you're  
+likely to see when you're not dealing with perfectly sorted/reverse sorted arrays.  
+This looks something like [4, 1, 3, 5, 2]. During each successive addition of an  
+element to the sorted portion of the array, each element will be compared to  
+somewhere between one element, verifying that it is in the proper position, or  
+every element in the currently sorted portion, indicating it needed to be moved  
+from it's initial position, all the way to the start of the array.  
+
+First 4 is trivially sorted. Our sorted portion of the array is [4].  
+
+Then we compare 4 and 1. 1 is smaller, so it gets moved to the left. Our sorted  
+portion of the array is [1, 4]. This took 1 comparison.  
+
+Then we compare 3 and 4. 3 is smaller, so it get's moved to the left. Then we  
+compare 3 and 1. 1 is smaller, sort 3 and 1 don't swap. Our sorted portion of the  
+array is [1, 3, 4].  
+
+This process will continue until the full array is sorted. When dealing with  
+randomly ordered elements, every i-th element, those itterated over by the outer  
+for loop, should, on average, be located halfway through the sorted portion of the  
+array. Any individual element could be located at i-1, i-2, i-3, etc.  
+
+## Average Case Scenario
+
+First element - Trivially sorted, no comparisons necessary.  
+Second element - There is 1 element in the sorted portion, at minimum and  
+maximum, this requires 1 comparison.  
+Third element - There is 2 elements in the sorted portion, at minimum this  
+requires 1 comparison, and at maximum this requres 2 comparisons.  
+Fourth element - There is 3 elements in the sorted portion, at minimum this  
+takes 1 comparison, and at maximum this requires 3 comparisons.  
+
+For the i-th element, the worse case requires i-1 comparisons. When dealing with  
+randomly ordered elements, each location is equally likely as the i-th element's  
+proper location, requiring as little as 1 comparison, to a maximum of i-1 comparisons  
+with each number of comparisons being equally likely, leading the average number of  
+comparison necessary to be the sum of possibilities divided by the number of  
+possibilities, or $frac{(1+2+3+...+(i-1))}{(i-1)}$
 
 
