@@ -23,6 +23,10 @@ iterating over the elements is reversed, the array is still sorted the same way
 some basic testing code that uses [jsverify](https://jsverify.github.io/) in
 `code.test.js`.
 
+## TL;DR
+
+$\Theta(n^2)$
+
 ## Average-Case Time Complexity of Insertion Sort
 
 In the lectures, we covered that insertion sort has best-case time complexity of
