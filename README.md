@@ -88,6 +88,28 @@ randomly ordered elements, each location is equally likely as the i-th element's
 proper location, requiring as little as 1 comparison, to a maximum of i-1 comparisons  
 with each number of comparisons being equally likely, leading the average number of  
 comparison necessary to be the sum of possibilities divided by the number of  
-possibilities, or $\frac{(1+2+3+...+(i-1))}{(i-1)}$
+possibilities, or: $\frac{(1+2+3+...+(i-1))}{(i-1)}$  
+$\frac{(1+2+3+...+(i-1))}{(i-1)}=\frac{i(i-1)}{2(i-1)}=\frac{i}{2}$  
+So the average comparisons for the i-th element is $\frac{i}{2}$.  
+Next we need the sum of the average comparisons of the entire array. Starting with  
+i=2, as the first element is trivally sorted, to n-1, where n-1 represents the length  
+of the array. That is $\frac{1}{2}(2+3+4+...+(n-1)=\frac{n(n-1)}{4}=\frac{n^2-n}{4}$.  
+For the purpose of asymptotic complexity constants aren't considered. Additionally,  
+as $n^2$ is the dominant term in the numerator, we can dismiss $-n$. Giving us an  
+average time complexity of $\Theta(n^2)$
 
+## Sources
+
+I used wolframalpha at https://www.wolframalpha.com/ for calculations.
+
+I got the sum of the first (n-1) numbers from:
+https://math.stackexchange.com/questions/185728/intuition-on-the-sum-of-first-n-1-numbers-is-equal-to-the-number-of-ways-of-pi
+
+For general information about this problem I read from the following two pages:
+https://www.geeksforgeeks.org/time-and-space-complexity-of-insertion-sort-algorithm/
+https://www.geeksforgeeks.org/insertion-sort-algorithm/
+
+## Plagiarism Notice
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
 
