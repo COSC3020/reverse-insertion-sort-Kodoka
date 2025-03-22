@@ -36,3 +36,23 @@ constant factors.
 Describe your reasoning and the conclusion you've come to. Your reasoning is
 most important -- you can easily find the answer, but you need to demonstrate
 that you've understood the concept. Add your answer to this markdown file.
+
+## Average-Case Time Complexity and Reasoning
+
+As discussed, the best case time complexity of insertion sort will be $\Theta(n)$.  
+This occurs when we're working with a fully sorted array like [1, 2, 3, 4, 5].  
+Each successive element only requires on comparison to verify that it is in the  
+proper location. 1 is less than 2, so it's good. 2 is less than 3, so it's good...  
+
+The worse case time complexity will be $\Theta(n^2)$. This occurs when we're  
+working with a an array full sorted in reverse order like [5, 4, 3, 2, 1].  
+Each successive element must be compares to every other element in the already  
+sorted portion, to get it to the correct position. 5 is greater than 4, so it  
+must move right. 5 is greater than 3, so it must move right, then 4 is greater  
+than 3, so it must move right as well...  
+
+So we have a best case, a worst case, a secret third case: average. What you're  
+likely to see when you're not dealing with perfectly sorted/reverse sorted arrays.
+This looks something like [4, 1, 3, 5, 2].
+
+
